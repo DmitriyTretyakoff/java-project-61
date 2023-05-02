@@ -1,2 +1,2 @@
 run-dist:
-	./build/install/app/bin/appmake
+	./build/install/app/bin/app
