@@ -9,5 +9,4 @@ public class Cli {
         String name = sc.next ();
         System.out.println ("Hello, " + name + "!");
     }
-
 }
