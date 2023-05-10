@@ -1,6 +1,8 @@
 package hexlet.code.games;
+
 import java.util.Random;
 import java.util.Scanner;
+
 public class GameGCD {
     public static void startGame(){
         Scanner sc = new Scanner (System.in);
