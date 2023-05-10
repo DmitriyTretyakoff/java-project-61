@@ -34,23 +34,5 @@ public class App {
                 break;
         }
         sc.close();
-//        if(n == 1) {
-//            System.out.println ("Welcome to the Brain Games!");
-//            System.out.print ("May I have your name? ");
-//            String name = sc.next ();
-//            System.out.println ("Hello, " + name + "!");
-//        } else if(n == 2){
-//            GameEven.startGame();
-//        } else if ( n == 3) {
-//            GameCalc.startGame ();
-//        } else if (n == 4) {
-//            GameGCD.startGame ();
-//        } else if (n == 5) {
-//            GameProgression.startGame ();
-//        } else if (n == 6){
-//            GamePrime.startGame ();
-//        } else{
-//            System.out.println ("Exit");
-//        }
     }
 }

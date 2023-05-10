@@ -35,6 +35,7 @@ public class GameGCD {
             }
         }
         System.out.println("Congratulations, " + name + "!");
+        sc.close();
     }
 }
 
