@@ -28,7 +28,7 @@ public class GamePrime {
                     break;
                 }
             }
-            if ((isPrime == true && answer.equalsIgnoreCase(answerYes)) || (isPrime == false && answer.equalsIgnoreCase(answerNo))) {
+            if ((isPrime == true && answer.equalsIgnoreCase (answerYes)) || (isPrime == false && answer.equalsIgnoreCase (answerNo))) {
                 System.out.println ("Correct!");
                 positiveCount++;
             } else {
@@ -38,14 +38,14 @@ public class GamePrime {
                     System.out.println ("'" + answerNo + "' is wrong answer ;" + "(. Correct answer was '" + answerYes + "'.");
                 }
                 negativeCount++;
-                }
             }
-            if (positiveCount >= 3) {
-                System.out.println ("Congratulations, " + name + "!");
-            } else {
-                System.out.println ("Let's try again, " + name + "!");
-            }
-        sc.close();
         }
+        if (positiveCount >= 3) {
+            System.out.println ("Congratulations, " + name + "!");
+        } else {
+            System.out.println ("Let's try again, " + name + "!");
+        }
+        sc.close ();
     }
+}
 

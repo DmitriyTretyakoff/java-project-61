@@ -38,7 +38,7 @@ public class GameEven {
         } else {
             System.out.println ("Let's try again, " + name + "!");
         }
-        sc.close();
+        sc.close ();
     }
 }
 

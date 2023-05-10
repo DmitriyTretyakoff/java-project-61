@@ -15,27 +15,27 @@ public class GameProgression {
         int positiveCount = 0;
         int negativeCount = 0;
         while (positiveCount < 3 && negativeCount < 1) {
-            int length = random.nextInt(6) + 5;
+            int length = random.nextInt (6) + 5;
             int[] progression = new int[length];
-            int hiddenIndex = random.nextInt(length);
-            int firstNumber = random.nextInt(11);
-            int delta = random.nextInt(3) + 1;
-            System.out.print("Question: ");
+            int hiddenIndex = random.nextInt (length);
+            int firstNumber = random.nextInt (11);
+            int delta = random.nextInt (3) + 1;
+            System.out.print ("Question: ");
             for (int i = 0; i < length; i++) {
                 progression[i] = firstNumber + i * delta;
                 if (i == hiddenIndex) {
-                    System.out.print(".. ");
+                    System.out.print (".. ");
                 } else {
-                    System.out.print(progression[i] + " ");
+                    System.out.print (progression[i] + " ");
                 }
             }
-            System.out.print("\nYour answer: ");
-            int answer = sc.nextInt();
+            System.out.print ("\nYour answer: ");
+            int answer = sc.nextInt ();
             if (answer == progression[hiddenIndex]) {
                 System.out.println ("Correct!");
                 positiveCount++;
             } else {
-                System.out.println(answer + " is wrong answer ;(. Correct answer was " + hiddenIndex);
+                System.out.println (answer + " is wrong answer ;(. Correct answer was " + hiddenIndex);
                 negativeCount++;
             }
         }
@@ -44,6 +44,6 @@ public class GameProgression {
         } else {
             System.out.println ("Let's try again, " + name + "!");
         }
-        sc.close();
+        sc.close ();
     }
 }
