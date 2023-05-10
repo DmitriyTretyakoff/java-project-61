@@ -27,7 +27,7 @@ public class App {
         } else if (n == 6){
             GamePrime.startGame ();
         } else{
-            System.out.println ("Ëxit");
+            System.out.println ("Exit");
         }
     }
 }
