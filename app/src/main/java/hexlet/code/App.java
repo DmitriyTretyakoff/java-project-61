@@ -20,6 +20,9 @@ public class App {
             case 3:
                 GameCalc.startGame ();
                 break;
+            case 4:
+                GameGCD.startGame ();
+                break;
             case 5:
                 GameProgression.startGame ();
                 break;
