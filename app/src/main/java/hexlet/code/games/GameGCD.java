@@ -1,41 +1,38 @@
 package hexlet.code.games;
 
+import hexlet.code.Cli;
+
 import java.util.Random;
 import java.util.Scanner;
 
 public class GameGCD {
+    public static String description;
+    public static String[][] questionsAndAnswers;
+    public static int maxDivisor = 1;
+
     public static void startGame() {
         Scanner sc = new Scanner (System.in);
         Random random = new Random ();
-        System.out.println ("Welcome to the Brain Games!");
-        System.out.print ("May I have your name? ");
-        String name = sc.next ();
-        System.out.println ("Hello, " + name + "!");
-        System.out.println ("Find the greatest common divisor of given numbers.");
-        int correctAnswers = 0;
-        int maxDivisor = 1;
-        while (correctAnswers < 3) {
-            int t = random.nextInt (100) + 1;
-            int d = random.nextInt (100) + 1;
-            System.out.println ("Question: " + t + " " + d);
-            System.out.print ("Your answer: ");
-            for (int i = 1; i <= Math.min (t, d); i++) {
-                if (t % i == 0 && d % i == 0) {
-                    maxDivisor = i;
-                }
-            }
-            int answer = sc.nextInt ();
-            if (answer == maxDivisor) {
-                System.out.println ("Correct!");
-                correctAnswers++;
-            } else {
-                System.out.println (answer + " is wrong answer ;(. Correct answer was " + maxDivisor);
-                System.out.println ("Let's try again, " + name + "!");
-                return;
+        Cli name = new Cli ();
+        name.welcomeUser ();
+        description = "Find the greatest common divisor of given numbers.";
+        questionsAndAnswers = new String[3][2];
+        for (int i = 0; i < 3; i++) {
+            int number1 = random.nextInt (100) + 1;
+            int number2 = random.nextInt (100) + 1;
+            questionsAndAnswers[i][0] = String.valueOf (number1 + " " + number2);
+            questionsAndAnswers[i][1] = findDivisor (number1, number2);
+        }
+        Engine.runGame (description, questionsAndAnswers);
+    }
+
+    private static String findDivisor(int number1, int number2) {
+        for (int i = 1; i <= Math.min (number1, number2); i++) {
+            if (number1 % i == 0 && number2 % i == 0) {
+                maxDivisor = i;
             }
         }
-        System.out.println ("Congratulations, " + name + "!");
-        sc.close ();
+        return String.valueOf (maxDivisor);
     }
 }
 
