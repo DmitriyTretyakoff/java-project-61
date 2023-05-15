@@ -22,7 +22,7 @@ public class GamePrime {
         for (int i = 0; i < 3; i++) {
             int number = random.nextInt (100) + 1;
             questionsAndAnswers[i][0] = String.valueOf (number);
-            questionsAndAnswers[i][1] = mbPrime() ? "true" : "false";
+            questionsAndAnswers[i][1] = mbPrime () ? "true" : "false";
         }
         Engine.runGame (description, questionsAndAnswers);
     }
