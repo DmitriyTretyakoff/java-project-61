@@ -1,6 +1,6 @@
 package hexlet.code.games;
 
-import hexlet.code.Cli;
+import hexlet.code.Engine;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -15,11 +15,9 @@ public class GamePrime {
         Scanner sc = new Scanner (System.in);
         Random random = new Random ();
         boolean isPrime = true;
-        Cli name = new Cli ();
-        name.welcomeUser ();
         description = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
         questionsAndAnswers = new String[3][2];
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < Engine.COUNT_ROUNDS; i++) {
             int number = random.nextInt (100) + 1;
             questionsAndAnswers[i][0] = String.valueOf (number);
             questionsAndAnswers[i][1] = mbPrime () ? "true" : "false";

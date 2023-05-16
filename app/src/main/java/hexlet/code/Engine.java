@@ -1,6 +1,4 @@
-package hexlet.code.games;
-
-import hexlet.code.Cli;
+package hexlet.code;
 
 import java.util.Scanner;
 
@@ -9,8 +7,9 @@ public class Engine {
 
     public static void runGame(String description, String[][] questionsAndAnswers) {
         Scanner sc = new Scanner (System.in);
-        Cli name = new Cli ();
-        name.welcomeUser ();
+        System.out.print ("May I have your name? ");
+        String userName = sc.next ();
+        System.out.println ("Hello, " + userName + "!");
         String answer = null;
         System.out.println (description);
         for (int i = 0; i < COUNT_ROUNDS; i++) {
@@ -20,11 +19,11 @@ public class Engine {
                 System.out.println ("Correct!");
             } else {
                 System.out.println ("'" + answer + "' is wrong answer ;" + "(. Correct answer was '" + questionsAndAnswers[i][1] + "'.");
-                System.out.println ("Let's try again, " + name + "!");
+                System.out.println ("Let's try again, " + userName + "!");
                 return;
             }
         }
-        System.out.println ("Congratulations, " + name + "!");
+        System.out.println ("Congratulations, " + userName + "!");
         sc.close ();
     }
 }

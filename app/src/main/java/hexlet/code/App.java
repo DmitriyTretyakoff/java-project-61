@@ -13,7 +13,7 @@ public class App {
         int n = sc.nextInt ();
         switch (n) {
             case 1:
-                Cli.welcomeUser ();
+                Greet.welcomeUser ();
                 break;
             case 2:
                 GameEven.startGame ();

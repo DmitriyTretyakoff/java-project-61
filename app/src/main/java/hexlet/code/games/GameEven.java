@@ -1,6 +1,6 @@
 package hexlet.code.games;
 
-import hexlet.code.Cli;
+import hexlet.code.Engine;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -12,11 +12,9 @@ public class GameEven {
     public static void startGame() {
         Scanner sc = new Scanner (System.in);
         Random random = new Random ();
-        Cli name = new Cli ();
-        name.welcomeUser ();
         description = "Answer 'yes' if the number is even, otherwise answer 'no'.";
         questionsAndAnswers = new String[3][2];
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < Engine.COUNT_ROUNDS; i++) {
             int number = random.nextInt (100) + 1;
             questionsAndAnswers[i][0] = String.valueOf (number);
             questionsAndAnswers[i][1] = isEven (number) ? "true" : "false";

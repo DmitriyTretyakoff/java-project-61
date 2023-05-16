@@ -1,6 +1,6 @@
 package hexlet.code.games;
 
-import hexlet.code.Cli;
+import hexlet.code.Engine;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -17,18 +17,14 @@ public class GameProgression {
     public static void startGame() {
         Scanner sc = new Scanner (System.in);
         Random random = new Random ();
-        Cli name = new Cli ();
-        name.welcomeUser ();
         description = "What number is missing in the progression?";
         questionsAndAnswers = new String[3][2];
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < Engine.COUNT_ROUNDS; i++) {
             int length = random.nextInt (6) + 5;
             int[] progression = new int[length];
-            int hiddenIndex = random.nextInt (length);
-            int firstNumber = random.nextInt (11);
-            int delta = random.nextInt (3) + 1;
-            int number1 = random.nextInt (100) + 1;
-            int number2 = random.nextInt (100) + 1;
+            hiddenIndex = random.nextInt (length);
+            firstNumber = random.nextInt (11);
+            delta = random.nextInt (3) + 1;
             questionsAndAnswers[i][0] = String.valueOf (progression[i] + " ");
             questionsAndAnswers[i][1] = findNumber ();
         }
