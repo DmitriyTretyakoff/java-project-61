@@ -8,31 +8,31 @@ import java.util.Scanner;
 public class GamePrime {
     public static String description;
     public static String[][] questionsAndAnswers;
-    public static boolean isPrime;
+    public static boolean prime;
     public static int number;
 
     public static void startGame() {
-        Scanner sc = new Scanner (System.in);
-        Random random = new Random ();
-        boolean isPrime = true;
+        Scanner sc = new Scanner(System.in);
+        Random random = new Random();
         description = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
         questionsAndAnswers = new String[3][2];
         for (int i = 0; i < Engine.COUNT_ROUNDS; i++) {
-            int number = random.nextInt (100) + 1;
-            questionsAndAnswers[i][0] = String.valueOf (number);
-            questionsAndAnswers[i][1] = mbPrime () ? "true" : "false";
+            int number = Utils.generateNumber(100) + 1;
+            questionsAndAnswers[i][0] = String.valueOf(number);
+            questionsAndAnswers[i][1] = isPrime(number) ? "yes" : "no";
         }
-        Engine.runGame (description, questionsAndAnswers);
+        Engine.runGame(description, questionsAndAnswers);
     }
 
-    private static boolean mbPrime() {
+    private static boolean isPrime(int number) {
         for (int i = 2; i <= number / 2; i++) {
             if (number % i == 0) {
-                isPrime = false;
-                break;
+                prime = false;
+            } else {
+                prime = true;
             }
         }
-        return isPrime;
+        return prime;
     }
 }
 
