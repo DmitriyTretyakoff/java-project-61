@@ -16,8 +16,8 @@ public class GameGCD {
         description = "Find the greatest common divisor of given numbers.";
         questionsAndAnswers = new String[3][2];
         for (int i = 0; i < Engine.COUNT_ROUNDS; i++) {
-            int number1 = random.nextInt (100) + 1;
-            int number2 = random.nextInt (100) + 1;
+            int number1 = Utils.generateNumber(100) + 1;//random.nextInt (100) + 1;
+            int number2 = Utils.generateNumber(100) + 1;//random.nextInt (100) + 1;
             questionsAndAnswers[i][0] = String.valueOf (number1 + " " + number2);
             questionsAndAnswers[i][1] = String.valueOf (divisor (number1, number2));
         }

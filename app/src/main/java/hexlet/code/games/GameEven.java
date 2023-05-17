@@ -15,7 +15,7 @@ public class GameEven {
         description = "Answer 'yes' if the number is even, otherwise answer 'no'.";
         questionsAndAnswers = new String[3][2];
         for (int i = 0; i < Engine.COUNT_ROUNDS; i++) {
-            int number = random.nextInt (100) + 1;
+            int number = Utils.generateNumber(100) + 1;//random.nextInt (100) + 1;
             questionsAndAnswers[i][0] = String.valueOf (number);
             questionsAndAnswers[i][1] = isEven (number) ? "yes" : "no";
         }

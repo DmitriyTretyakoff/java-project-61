@@ -19,8 +19,8 @@ public class GameCalc {
         int randomOperatorIndex = random.nextInt (operators.length);
         char operator = operators[randomOperatorIndex];
         for (int i = 0; i < Engine.COUNT_ROUNDS; i++) {
-            int number1 = random.nextInt (100) + 1;
-            int number2 = random.nextInt (100) + 1;
+            int number1 = Utils.generateNumber(100) + 1;//random.nextInt (100) + 1;
+            int number2 = Utils.generateNumber(100) + 1;//random.nextInt (100) + 1;
             questionsAndAnswers[i][0] = String.valueOf (number1 + " " + operator + " " + number2);
             questionsAndAnswers[i][1] = calculate (number1, operator, number2);
         }
