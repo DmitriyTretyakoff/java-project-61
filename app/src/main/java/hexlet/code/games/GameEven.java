@@ -17,7 +17,7 @@ public class GameEven {
         for (int i = 0; i < Engine.COUNT_ROUNDS; i++) {
             int number = random.nextInt (100) + 1;
             questionsAndAnswers[i][0] = String.valueOf (number);
-            questionsAndAnswers[i][1] = isEven (number) ? "true" : "false";
+            questionsAndAnswers[i][1] = isEven (number) ? "yes" : "no";
         }
         Engine.runGame (description, questionsAndAnswers);
     }
