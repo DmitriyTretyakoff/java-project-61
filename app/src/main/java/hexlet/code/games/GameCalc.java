@@ -6,14 +6,13 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class GameCalc {
-    public static String description;
+    public static String  description = "What is the result of the expression?";
     public static String[][] questionsAndAnswers;
     private static int result;
 
     public static void startGame() {
         Scanner sc = new Scanner(System.in);
         Random random = new Random();
-        description = "What is the result of the expression?";
         questionsAndAnswers = new String[3][2];
         char[] operators = {'+', '-', '*'};
         int randomOperatorIndex = random.nextInt(operators.length);
