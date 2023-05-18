@@ -7,13 +7,12 @@ import java.util.Scanner;
 
 public class GameCalc {
     public static String description = "What is the result of the expression?";
-    public static String[][] questionsAndAnswers;
+    public static String[][] questionsAndAnswers = new String[3][2];
     private static int result;
 
     public static void startGame() {
         Scanner sc = new Scanner(System.in);
         Random random = new Random();
-        questionsAndAnswers = new String[3][2];
         char[] operators = {'+', '-', '*'};
         int randomOperatorIndex = random.nextInt(operators.length);
         char operator = operators[randomOperatorIndex];
