@@ -4,7 +4,6 @@ import hexlet.code.Engine;
 
 import java.util.Arrays;
 import java.util.Random;
-import java.util.Scanner;
 
 public class GameProgression {
     public static String description = "What number is missing in the progression?";
@@ -14,7 +13,6 @@ public class GameProgression {
     public static int firstNumber;
 
     public static void startGame() {
-        Scanner sc = new Scanner(System.in);
         Random random = new Random();
         for (int i = 0; i < Engine.COUNT_ROUNDS; i++) {
             String[] progression = generateProgression();

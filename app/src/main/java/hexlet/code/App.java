@@ -33,6 +33,8 @@ public class App {
             case 0:
                 System.out.println("Exit");
                 break;
+            default:
+                System.out.println("Error");
         }
         sc.close();
     }

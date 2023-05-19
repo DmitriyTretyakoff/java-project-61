@@ -10,7 +10,7 @@ public class Engine {
         System.out.print("May I have your name? ");
         String userName = sc.next();
         System.out.println("Hello, " + userName + "!");
-        String answer = null;
+        String answer;
         System.out.println(description);
         for (int i = 0; i < COUNT_ROUNDS; i++) {
             System.out.println("Question: " + questionsAndAnswers[i][0]);
