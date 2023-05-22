@@ -8,7 +8,6 @@ import java.util.Random;
 public class GameCalc {
     public static String description = "What is the result of the expression?";
     public static String[][] questionsAndAnswers = new String[3][2];
-    private static int result;
 
     public static void startGame() {
         Random random = new Random();
@@ -19,12 +18,13 @@ public class GameCalc {
             int number1 = Utils.generateNumber(100) + 1;
             int number2 = Utils.generateNumber(100) + 1;
             questionsAndAnswers[i][0] = (number1 + " " + operator + " " + number2);
-            questionsAndAnswers[i][1] = calculate(number1, operator, number2);
+            questionsAndAnswers[i][1] = String.valueOf(calculate(operator, number1, number2));
         }
         Engine.runGame(description, questionsAndAnswers);
     }
 
-    private static String calculate(int number1, char operator, int number2) {
+    private static int calculate(char operator, int number1, int number2) {
+        int result = 0;
         switch (operator) {
             case '+':
                 result = number1 + number2;
@@ -36,6 +36,6 @@ public class GameCalc {
                 result = number1 * number2;
                 break;
         }
-        return String.valueOf(result);
+        return result;
     }
 }

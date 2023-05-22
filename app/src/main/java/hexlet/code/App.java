@@ -34,7 +34,7 @@ public class App {
                 System.out.println("Exit");
                 break;
             default:
-                System.out.println("Error");
+                System.out.println("Введен неверный номер игры, возможные значения: 1-6.");
         }
         sc.close();
     }
