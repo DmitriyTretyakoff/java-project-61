@@ -1,6 +1,7 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.Utils;
 
 public class GameEven {
     public static String description = "Answer 'yes' if the number is even, otherwise answer 'no'.";
