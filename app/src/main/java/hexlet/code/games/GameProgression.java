@@ -16,28 +16,28 @@ public class GameProgression {
     public static void startGame() {
         Random random = new Random();
         for (int i = 0; i < Engine.COUNT_ROUNDS; i++) {
-            String[] progression = generateProgression();
+            int[] progression = generateProgression();
             hiddenIndex = random.nextInt(progression.length);
-            int hidden = Integer.parseInt(progression[hiddenIndex]);
+            int hidden = progression[hiddenIndex];
             questionsAndAnswers[i][0] = Arrays.toString(buildQuestion(progression));
             questionsAndAnswers[i][1] = String.valueOf(hidden);
         }
         Engine.runGame(description, questionsAndAnswers);
     }
 
-    private static String[] generateProgression() {
+    private static int[] generateProgression() {
         int length = Utils.generateNumber(6) + 5;
-        String[] progression = new String[length];
+        int[] progression = new int[length];
         firstNumber = Utils.generateNumber(11);
         delta = Utils.generateNumber(3) + 1;
         for (int i = 0; i < length; i++) {
-            progression[i] = String.valueOf(firstNumber + i * delta);
+            progression[i] = firstNumber + i * delta;
         }
         return progression;
     }
 
-    private static String[] buildQuestion(String[] progression) {
-        progression[hiddenIndex] = "..";
+    private static int[] buildQuestion(int[] progression) {
+        progression[hiddenIndex] = Integer.parseInt("..");
         return progression;
     }
 }
