@@ -26,7 +26,7 @@ public class GameProgression {
     }
 
     private static int[] generateProgression() {
-        int length = Utils.generateNumber(6) + 5;
+        int length = Utils.generateNumber(6) + 6;
         int[] progression = new int[length];
         firstNumber = Utils.generateNumber(11);
         delta = Utils.generateNumber(3) + 1;
