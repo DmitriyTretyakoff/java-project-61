@@ -36,8 +36,13 @@ public class GameProgression {
         return progression;
     }
 
-    private static int[] buildQuestion(int[] progression) {
-        progression[hiddenIndex] = Integer.parseInt("..");
-        return progression;
+    private static String[] buildQuestion(int[] progression) {
+        String[] stringProgression = new String[progression.length];
+
+        for (int i = 0; i < progression.length; i++) {
+            stringProgression[i] = String.valueOf(progression[i]);
+            stringProgression[hiddenIndex] = "..";
+        }
+        return stringProgression;
     }
 }
