@@ -38,10 +38,9 @@ public class GameProgression {
 
     private static String[] buildQuestion(int[] progression) {
         String[] stringProgression = new String[progression.length];
-
         for (int i = 0; i < progression.length; i++) {
             stringProgression[i] = String.valueOf(progression[i]);
-            stringProgression[hiddenIndex] = "..";
+            stringProgression[hiddenIndex] = ("..");
         }
         return stringProgression;
     }
