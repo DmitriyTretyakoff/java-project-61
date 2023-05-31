@@ -37,11 +37,8 @@ public class GameProgression {
 
     private static String buildQuestion(int[] progression) {
         StringBuilder builder = new StringBuilder();
-        String[] stringProgression = new String[progression.length];
         for (int i = 0; i < progression.length; i++) {
-            stringProgression[i] = String.valueOf(progression[i]);
-            stringProgression[hiddenIndex] = ("..");
-            builder.append(firstNumber + i * delta);
+            builder.append(i == hiddenIndex ? ".." : firstNumber + i * delta);
             if (i != progression.length - 1) {
                 builder.append(", ");
             }
