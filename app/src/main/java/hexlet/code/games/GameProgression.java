@@ -40,7 +40,7 @@ public class GameProgression {
         for (int i = 0; i < progression.length; i++) {
             builder.append(i == hiddenIndex ? ".." : firstNumber + i * delta);
             if (i != progression.length - 1) {
-                builder.append(", ");
+                builder.append(" ");
             }
         }
         return builder.toString();
