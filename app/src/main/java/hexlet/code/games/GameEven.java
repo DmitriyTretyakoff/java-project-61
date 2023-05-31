@@ -4,17 +4,17 @@ import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 public class GameEven {
-    public static String description = "Answer 'yes' if the number is even, otherwise answer 'no'.";
-    public static String[][] questionsAndAnswers = new String[3][2];
+    public static final String DESCRIPTION = "Answer 'yes' if the number is even, otherwise answer 'no'.";
+    public static final String[][] QUESTIONS_AND_ANSWERS = new String[3][2];
 
 
     public static void startGame() {
         for (int i = 0; i < Engine.COUNT_ROUNDS; i++) {
             int number = Utils.generateNumber(100) + 1;
-            questionsAndAnswers[i][0] = String.valueOf(number);
-            questionsAndAnswers[i][1] = isEven(number) ? "yes" : "no";
+            QUESTIONS_AND_ANSWERS[i][0] = String.valueOf(number);
+            QUESTIONS_AND_ANSWERS[i][1] = isEven(number) ? "yes" : "no";
         }
-        Engine.runGame(description, questionsAndAnswers);
+        Engine.runGame(DESCRIPTION, QUESTIONS_AND_ANSWERS);
     }
 
     private static boolean isEven(int number) {
