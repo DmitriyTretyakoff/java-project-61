@@ -9,7 +9,7 @@ public class GamePrime {
 
     public static void startGame() {
         for (int i = 0; i < Engine.COUNT_ROUNDS; i++) {
-            int number = Utils.generateNumber(100) + 1;
+            int number = 67;// Utils.generateNumber(100) + 1;
             questionsAndAnswers[i][0] = String.valueOf(number);
             questionsAndAnswers[i][1] = isPrime(number) ? "yes" : "no";
         }
@@ -18,7 +18,7 @@ public class GamePrime {
 
     private static boolean isPrime(int number) {
         for (int i = 2; i <= Math.sqrt(number); i++) {
-            if (number % i != 0) {
+            if (number % i == 0) {
                 return false;
             }
         }

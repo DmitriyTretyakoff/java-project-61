@@ -3,7 +3,6 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 import hexlet.code.Utils;
 
-import java.util.Arrays;
 import java.util.Random;
 
 public class GameProgression {
@@ -19,7 +18,7 @@ public class GameProgression {
             int[] progression = generateProgression();
             hiddenIndex = random.nextInt(progression.length);
             int hidden = progression[hiddenIndex];
-            questionsAndAnswers[i][0] = Arrays.toString(buildQuestion(progression));
+            questionsAndAnswers[i][0] = buildQuestion(progression);
             questionsAndAnswers[i][1] = String.valueOf(hidden);
         }
         Engine.runGame(description, questionsAndAnswers);
@@ -36,12 +35,17 @@ public class GameProgression {
         return progression;
     }
 
-    private static String[] buildQuestion(int[] progression) {
+    private static String buildQuestion(int[] progression) {
+        StringBuilder builder = new StringBuilder();
         String[] stringProgression = new String[progression.length];
         for (int i = 0; i < progression.length; i++) {
             stringProgression[i] = String.valueOf(progression[i]);
             stringProgression[hiddenIndex] = ("..");
+            builder.append(firstNumber + i * delta);
+            if (i != progression.length - 1) {
+                builder.append(", ");
+            }
         }
-        return stringProgression;
+        return builder.toString();
     }
 }
