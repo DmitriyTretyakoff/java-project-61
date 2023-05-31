@@ -6,8 +6,8 @@ import hexlet.code.Utils;
 import java.util.Random;
 
 public class GameCalc {
-    public static String description = "What is the result of the expression?";
-    public static String[][] questionsAndAnswers = new String[3][2];
+    private static final String description = "What is the result of the expression?";
+    private static final String[][] questionsAndAnswers = new String[3][2];
 
     public static void startGame() {
         Random random = new Random();
