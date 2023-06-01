@@ -12,7 +12,7 @@ public class GameGCD {
 
     public static void startGame() {
         for (int i = 0; i < Engine.COUNT_ROUNDS; i++) {
-            var rangeForRandom = 100;
+            int rangeForRandom = 100;
             int number1 = Utils.generateNumber(rangeForRandom) + 1;
             int number2 = Utils.generateNumber(rangeForRandom) + 1;
             QUESTIONS_ANSWERS[i][0] = (number1 + " " + number2);
