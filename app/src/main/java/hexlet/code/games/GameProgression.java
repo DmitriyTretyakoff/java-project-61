@@ -27,10 +27,13 @@ public class GameProgression {
     }
 
     private static int[] generateProgression() {
-        int length = Utils.generateNumber(5) + 6;
+        var rangeForRandom = 5;
+        int length = Utils.generateNumber(rangeForRandom) + 6;
         int[] progression = new int[length];
-        firstNumber = Utils.generateNumber(11);
-        delta = Utils.generateNumber(3) + 1;
+        var randomFirstNumber = 11;
+        firstNumber = Utils.generateNumber(randomFirstNumber);
+        var randomDelta = 3;
+        delta = Utils.generateNumber(randomDelta) + 1;
         for (int i = 0; i < length; i++) {
             progression[i] = firstNumber + i * delta;
         }

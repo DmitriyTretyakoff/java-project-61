@@ -11,8 +11,8 @@ public class GamePrime {
 
     public static void startGame() {
         for (int i = 0; i < Engine.COUNT_ROUNDS; i++) {
-            var rangeForRundom = 100;
-            int number = Utils.generateNumber(rangeForRundom) + 1;
+            var rangeForRandom = 100;
+            int number = Utils.generateNumber(rangeForRandom) + 1;
             QUESTIONS_ANSWERS[i][0] = String.valueOf(number);
             QUESTIONS_ANSWERS[i][1] = isPrime(number) ? "yes" : "no";
         }
