@@ -6,8 +6,8 @@ import hexlet.code.Utils;
 import java.util.Random;
 
 public class GameProgression {
-    public static String DESCRIPTION = "What number is missing in the progression?";
-    public static String[][] QUESTIONS_AND_ANSWERS = new String[3][2];
+    public static final String DESCRIPTION = "What number is missing in the progression?";
+    public static final String[][] QUESTIONS_ANSWERS = new String[3][2];
     public static int DELTA;
     public static int HIDDEN_INDEX;
     public static int FIRST_NUMBER;
@@ -18,10 +18,10 @@ public class GameProgression {
             int[] progression = generateProgression();
             HIDDEN_INDEX = random.nextInt(progression.length);
             int hidden = progression[HIDDEN_INDEX];
-            QUESTIONS_AND_ANSWERS[i][0] = buildQuestion(progression);
-            QUESTIONS_AND_ANSWERS[i][1] = String.valueOf(hidden);
+            QUESTIONS_ANSWERS[i][0] = buildQuestion(progression);
+            QUESTIONS_ANSWERS[i][1] = String.valueOf(hidden);
         }
-        Engine.runGame(DESCRIPTION, QUESTIONS_AND_ANSWERS);
+        Engine.runGame(DESCRIPTION, QUESTIONS_ANSWERS);
     }
 
     private static int[] generateProgression() {
