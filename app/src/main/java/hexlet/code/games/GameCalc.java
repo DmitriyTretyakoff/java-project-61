@@ -7,7 +7,7 @@ import java.util.Random;
 
 public class GameCalc {
     public static final String DESCRIPTION = "What is the result of the expression?";
-    private static final int rangeForRandom = 100;
+    private static final int RANGE_RANDOM = 100;
     public static final int ROWS = 3;
     public static final int COLUMNS = 2;
     public static final String[][] QUESTIONS_ANSWERS = new String[ROWS][COLUMNS];
@@ -18,8 +18,8 @@ public class GameCalc {
         int randomOperatorIndex = random.nextInt(operators.length);
         char operator = operators[randomOperatorIndex];
         for (int i = 0; i < Engine.COUNT_ROUNDS; i++) {
-            int number1 = Utils.generateNumber(rangeForRandom) + 1;
-            int number2 = Utils.generateNumber(rangeForRandom) + 1;
+            int number1 = Utils.generateNumber(RANGE_RANDOM) + 1;
+            int number2 = Utils.generateNumber(RANGE_RANDOM) + 1;
             QUESTIONS_ANSWERS[i][0] = (number1 + " " + operator + " " + number2);
             QUESTIONS_ANSWERS[i][1] = String.valueOf(calculate(operator, number1, number2));
         }
