@@ -35,6 +35,8 @@ public class GameCalc {
             case '*':
                 result = number1 * number2;
                 break;
+            default:
+                break;
         }
         return result;
     }
