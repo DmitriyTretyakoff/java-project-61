@@ -7,7 +7,9 @@ import java.util.Random;
 
 public class GameProgression {
     public static final String DESCRIPTION = "What number is missing in the progression?";
-    public static final String[][] QUESTIONS_ANSWERS = new String[3][2];
+    public static final int ROWS = 3;
+    public static final int COLUMNS = 2;
+    public static final String[][] QUESTIONS_ANSWERS = new String[ROWS][COLUMNS];
     private static int delta;
     private static int hiddenIndex;
     private static int firstNumber;
