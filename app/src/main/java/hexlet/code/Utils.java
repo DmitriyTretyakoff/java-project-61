@@ -3,8 +3,9 @@ package hexlet.code;
 import java.util.Random;
 
 public class Utils {
-    public static int generateNumber(int n) {
+
+    public static int generateNumber(int COUNT) {
         Random random = new Random();
-        return random.nextInt(n);
+        return random.nextInt(COUNT);
     }
 }
