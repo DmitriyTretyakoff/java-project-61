@@ -8,9 +8,9 @@ import java.util.Random;
 public class GameProgression {
     public static final String DESCRIPTION = "What number is missing in the progression?";
     public static final String[][] QUESTIONS_ANSWERS = new String[3][2];
-    public static int delta;
-    public static int hiddenIndex;
-    public static int firstNumber;
+    private static int delta;
+    private static int hiddenIndex;
+    private static int firstNumber;
 
     public static void startGame() {
         Random random = new Random();
