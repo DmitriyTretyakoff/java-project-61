@@ -8,16 +8,16 @@ import java.util.Random;
 public class GameProgression {
     public static final String DESCRIPTION = "What number is missing in the progression?";
     public static final String[][] QUESTIONS_ANSWERS = new String[3][2];
-    public static int DELTA;
-    public static int HIDDEN_INDEX;
-    public static int FIRST_NUMBER;
+    public static int delta;
+    public static int hiddenIndex;
+    public static int firstNumber;
 
     public static void startGame() {
         Random random = new Random();
         for (int i = 0; i < Engine.COUNT_ROUNDS; i++) {
             int[] progression = generateProgression();
-            HIDDEN_INDEX = random.nextInt(progression.length);
-            int hidden = progression[HIDDEN_INDEX];
+            hiddenIndex = random.nextInt(progression.length);
+            int hidden = progression[hiddenIndex];
             QUESTIONS_ANSWERS[i][0] = buildQuestion(progression);
             QUESTIONS_ANSWERS[i][1] = String.valueOf(hidden);
         }
@@ -27,10 +27,10 @@ public class GameProgression {
     private static int[] generateProgression() {
         int length = Utils.generateNumber(5) + 6;
         int[] progression = new int[length];
-        FIRST_NUMBER = Utils.generateNumber(11);
-        DELTA = Utils.generateNumber(3) + 1;
+        firstNumber = Utils.generateNumber(11);
+        delta = Utils.generateNumber(3) + 1;
         for (int i = 0; i < length; i++) {
-            progression[i] = FIRST_NUMBER + i * DELTA;
+            progression[i] = firstNumber + i * delta;
         }
         return progression;
     }
@@ -38,7 +38,7 @@ public class GameProgression {
     private static String buildQuestion(int[] progression) {
         StringBuilder builder = new StringBuilder();
         for (int i = 0; i < progression.length; i++) {
-            builder.append(i == HIDDEN_INDEX ? ".." : FIRST_NUMBER + i * DELTA);
+            builder.append(i == hiddenIndex ? ".." : firstNumber + i * delta);
             if (i != progression.length - 1) {
                 builder.append(" ");
             }
