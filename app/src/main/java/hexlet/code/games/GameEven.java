@@ -7,7 +7,6 @@ public class GameEven {
     public static final String DESCRIPTION = "Answer 'yes' if the number is even, otherwise answer 'no'.";
     public static final String[][] QUESTIONS_ANSWERS = new String[3][2];
 
-
     public static void startGame() {
         for (int i = 0; i < Engine.COUNT_ROUNDS; i++) {
             int number = Utils.generateNumber(100) + 1;
