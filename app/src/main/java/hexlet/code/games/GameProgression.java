@@ -13,6 +13,9 @@ public class GameProgression {
     private static int delta;
     private static int hiddenIndex;
     private static int firstNumber;
+    private static final int rangeForRandom = 5;
+    private static final int randomFirstNumber = 11;
+    private static final int randomDelta = 3;
 
     public static void startGame() {
         Random random = new Random();
@@ -27,12 +30,9 @@ public class GameProgression {
     }
 
     private static int[] generateProgression() {
-        int rangeForRandom = 5;
         int length = Utils.generateNumber(rangeForRandom) + 6;
         int[] progression = new int[length];
-        int randomFirstNumber = 11;
         firstNumber = Utils.generateNumber(randomFirstNumber);
-        int randomDelta = 3;
         delta = Utils.generateNumber(randomDelta) + 1;
         for (int i = 0; i < length; i++) {
             progression[i] = firstNumber + i * delta;

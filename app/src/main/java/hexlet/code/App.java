@@ -9,7 +9,7 @@ import hexlet.code.games.GameProgression;
 import java.util.Scanner;
 
 public class App {
-    public static int numberGames;
+    private static int numberGames;
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
