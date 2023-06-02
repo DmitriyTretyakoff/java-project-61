@@ -9,14 +9,16 @@ import hexlet.code.games.GameProgression;
 import java.util.Scanner;
 
 public class App {
+    public static int NUMBER_GAMES;
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Welcome to the Brain Games!");
         System.out.println("Please enter the game number and press Enter.");
         System.out.println(" 1 - Greet \n 2 - Even \n 3 - Calc\n 4 - GCD\n 5 - Progression\n 6 - Prime \n 0 - Exit");
         System.out.print("Your choice: ");
-        int n = sc.nextInt();
-        switch (n) {
+        NUMBER_GAMES = sc.nextInt();
+        switch (NUMBER_GAMES) {
             case 1:
                 Greet.welcomeUser();
                 break;
