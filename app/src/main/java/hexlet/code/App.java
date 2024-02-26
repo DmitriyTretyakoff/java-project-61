@@ -9,13 +9,13 @@ import hexlet.code.games.GameProgression;
 import java.util.Scanner;
 
 public class App {
-    private static final int ODIN = 1;
-    private static final int DWA = 2;
-    private static final int TREE = 3;
-    private static final int CHET = 4;
-    private static final int PYAT = 5;
-    private static final int SHEST = 6;
-    private static final int NOOL = 0;
+    private static final int ONE = 1;
+    private static final int TWO = 2;
+    private static final int THREE = 3;
+    private static final int FOUR = 4;
+    private static final int FIVE = 5;
+    private static final int SIX = 6;
+    private static final int ZERO = 0;
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -25,25 +25,25 @@ public class App {
         System.out.print("Your choice: ");
         int numberGames = sc.nextInt();
         switch (numberGames) {
-            case ODIN:
+            case ONE:
                 Greet.welcomeUser();
                 break;
-            case DWA:
+            case TWO:
                 GameEven.startGame();
                 break;
-            case TREE:
+            case THREE:
                 GameCalc.startGame();
                 break;
-            case CHET:
+            case FOUR:
                 GameGCD.startGame();
                 break;
-            case PYAT:
+            case FIVE:
                 GameProgression.startGame();
                 break;
-            case SHEST:
+            case SIX:
                 GamePrime.startGame();
                 break;
-            case NOOL:
+            case ZERO:
                 System.out.println("Exit");
                 break;
             default:
