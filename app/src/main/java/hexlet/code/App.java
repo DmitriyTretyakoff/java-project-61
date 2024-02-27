@@ -17,7 +17,7 @@ public class App {
     private static final int SIXTH = 6;
     private static final int ZERO = 0;
 
-    public static void main(String[] args) {
+    public static void main (String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Welcome to the Brain Games!");
         System.out.println("Please enter the game number and press Enter.");
